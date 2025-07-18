@@ -1,0 +1,28 @@
+# Configuration for dbt Documentation Automation
+# Copy this file to config.yml and modify as needed
+
+# OpenAI API Configuration
+openai:
+  api_key: "your-api-key-here"  # Or use environment variable OPENAI_API_KEY
+  model: "gpt-3.5-turbo"        # Options: gpt-3.5-turbo, gpt-4, gpt-4-turbo
+  temperature: 0.3              # 0.0 = focused, 1.0 = creative
+  max_tokens: 2000              # Maximum response length
+
+# Processing Configuration
+processing:
+  concurrent_requests: 5        # Number of parallel LLM calls
+  batch_size: 10               # Models to process in each batch
+  retry_attempts: 3            # Number of retries for failed requests
+
+# Output Configuration
+output:
+  docs_folder: "docs"          # Where to save doc block files
+  doc_block_suffix: "_doc"     # Suffix for doc block names
+  backup_yaml: true            # Backup YAML files before modification
+
+# Prompt Customization
+prompt:
+  include_sql: true            # Include SQL in prompt (truncated)
+  include_dependencies: true   # Include upstream dependencies
+  include_tests: true          # Include test information
+  max_sql_length: 1000        # Maximum SQL characters to include
