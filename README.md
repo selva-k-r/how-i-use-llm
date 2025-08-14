@@ -1,4 +1,4 @@
-# How I Use LLM
+# DBT Automations
 
 A collection of practical Generative AI use cases for data engineering, analytics, and automation. This repository showcases real-world applications of Large Language Models to solve common data problems.
 
